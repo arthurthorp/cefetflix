@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ceflix</title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="./js/filmes.js"></script>
+	<script type="text/javascript" src="./js/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./css/filmes.css">
+	<link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
+	<script type="text/javascript">
+		$(function(){
+			console.log(filmes);
+			$.each(filmes, function(indice, programa){
+				var $ul= $("<ul />");
+
+				var $seme= $("<ul />");
+
+				$.each(programa.titulosSemelhantes, function(i, tituloId){
+					$.each(filmes, function(i, semelhante){
+						if(tituloId==semelhante.id){
+						$seme.append($("<li />").text(semelhante.titulo))
+					}	
+					})
+					
+				});
+
+				$.each(programa.opinioes, function(i, obj){
+					for ($i=0; $i< obj.rating; $i++){
+						$ul.append($("<i />").addClass("fa fa-star"));
+					}	
+					$ul.append($("<li />").text(obj.descricao));
+				});
+				$(".filmes")
+					.append($("<div />")
+						.addClass("filme")
+						.append($("<h1 />")
+								.text(programa.titulo)
+						)
+						.append($("<img />")
+								.attr("src", programa.figura)
+						)
+						.append($("<p />")
+								.text(programa.resumo)
+						)
+						.append($("<div />")
+							.addClass("genero")
+							.append($("<h4 />")
+								.text(programa.generos))	
+							)
+						.append($("<div />")
+							.append($("<h4 />")
+								.text("Avaliações")	
+								)
+							.append($ul)
+						
+						)
+						.append($("<h4 />")
+							.text("Títulos semelhantes")
+							)
+							.append($seme)	
+					)
+			});
+		})
+	</script>
+</head>
+<body>
+	<h1>Cefetflix</h1>
+	<div class="filmes">
+		
+		
+	</div>
+</body>
+</html>
