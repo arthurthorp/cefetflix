@@ -1,0 +1,48 @@
+img{
+	width: 400px;
+}
+.filme{
+	border-radius: 10px;
+	padding: 50px;
+	background-color: transparent;
+	margin: 50px;
+	border: 3px solid #FFF; 
+}
+.filme:hover {
+	background-color: rgba(220,220,220,0.3);
+}
+body{
+	width: 100%;
+	margin: 0 auto;
+	text-align: center;
+	color: #FFF;
+	background: url(https://cdn.pixabay.com/photo/2017/08/05/15/00/auditorium-2584269_960_720.jpg) no-repeat fixed;
+	font-family: sans-serif;
+	background-size: 100%;
+
+}
+h3{
+	clear: both;
+}
+
+ul{
+	list-style: none;
+}
+
+.rating {
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
+.rating > span {
+  display: inline-block;
+  position: relative;
+  width: 1.1em;
+  content: "\2605";
+  position: absolute;
+}
+.fa{
+ color: yellow;
+}
+#logo{
+	color: red;
+}
