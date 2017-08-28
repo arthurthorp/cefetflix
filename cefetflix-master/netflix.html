@@ -3,6 +3,7 @@
 <head>
 	<title>Ceflix</title>
 	<meta charset="utf-8">
+	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<script type="text/javascript" src="./js/filmes.js"></script>
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
 	<link rel="stylesheet" type="text/css" href="./css/filmes.css">
@@ -42,12 +43,13 @@
 				$(".filmes")
 					.append($("<div />")
 						.addClass("filme")
-						.append($("<h1 />")
-								.text(programa.titulo)
-						)
 						.append($("<img />")
 								.attr("src", programa.figura)
 						)
+						.append($("<h1 />")
+								.text(programa.titulo)
+						)
+						
 						.append($("<p />")
 								.text(programa.resumo)
 						)
@@ -56,33 +58,44 @@
 							.append($("<h4 />")
 								.text(programa.generos))	
 							)
+						.append($("<div />").addClass("elenco")
+							
+							.append($("<h2 />")
+								.text("Elenco")
+							)
+								.append($("<p />")
+									.text(programa.elenco)
+							)
+						)
+
 						.append($("<div />")
-							.append($("<h4 />")
+							.addClass("av")
+							.append($("<h2 />")
 								.text("Avaliações")	
 								)
 							.append($ul)
+								
 						
 						)
 							
-						.append($("<h4 />")
-							.text("Títulos semelhantes")
+						.append($("<div />")
+							.addClass("ts")
+								.append($("<h2 />")
+								.text("Títulos semelhantes")
+								
 							)
-							.append($seme)	
-
-							.append($("<div />").addClass("elenco")
-							
-							.append($("<h4 />")
-								.text("Elenco")
-								)
-							.text(programa.elenco)
+						.append($seme)
 						)
+							
 					)
 			});
 		})
 	</script>
 </head>
 <body>
-	<h1 id="logo">Cefetflix</h1>
+	<div class="logo">
+	<h1>Cefetflix</h1>
+	</div>
 	<div class="filmes">
 		
 	</div>
