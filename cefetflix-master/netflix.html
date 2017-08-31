@@ -6,8 +6,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<script type="text/javascript" src="./js/filmes.js"></script>
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
-	<link rel="stylesheet" type="text/css" href="./css/filmes.css">
+	<link rel="stylesheet" type="text/css" href="./css/font-awesome.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/filmes.css"/>
 	<script type="text/javascript">
 		$(function(){
 			console.log(filmes);
@@ -15,8 +16,33 @@
 				var $ul= $("<ul />");
 				var $ele= $("<ul />");
 				var $seme= $("<ul />");
-
-			$.each(programa.elenco, function(i, ator){
+				if(programa.classificacao==0){				
+					var $Classificacao="https://vignette4.wikia.nocookie.net/simsfanon/images/d/d0/Classifica%C3%A7%C3%A3o_Livre.png/revision/latest?cb=20130906042945&path-prefix=pt-br";
+				}else{
+						if(programa.classificacao==10){
+										var $Classificacao="https://vignette2.wikia.nocookie.net/simsfanon/images/4/47/Classifica%C3%A7%C3%A3o_10_anos.png/revision/latest?cb=20130906041926&path-prefix=pt-br";
+						}
+						else{
+							if(programa.classificacao==12){
+								var $Classificacao="https://classificacaoindicativa.files.wordpress.com/2014/09/simbolo-12.jpg";
+							}
+							else{
+								 if(programa.classificacao==14){
+										var $Classificacao="https://classificacaoindicativa.files.wordpress.com/2014/09/simbolo-14.jpg";
+								}
+								else{
+									if(programa.classificacao==16){
+										var $Classificacao="https://classificacaoindicativa.files.wordpress.com/2014/09/simbolo-16.jpg";
+									}
+									else{
+										var $Classificacao="https://classificacaoindicativa.files.wordpress.com/2014/09/simbolo-18.jpg";
+										}
+									}
+								}
+							}
+						} 			 			
+									
+				$.each(programa.elenco, function(i, ator){
 				$ele.append($("<li/>").text(ator.elenco))
 			});
 				$.each(programa.titulosSemelhantes, function(i, tituloId){
@@ -43,7 +69,7 @@
 				$(".filmes")
 					.append($("<div />")
 						.addClass("filme")
-						.append($("<img />")
+						.append($("<img />") .addClass("foto")
 								.attr("src", programa.figura)
 						)
 						.append($("<div />")
@@ -70,13 +96,11 @@
 								)
 							)
 							
-							.append($("<div />").addClass("classifi")
-								
-								.append($("<h2 />")
-									.text("Classificação indicativa")
-								)
-									.append($("<p />")
-										.text(programa.classificacao)
+							.append($("<div />")
+								.addClass("classifi")
+								.append($("<img />").addClass("classi")
+									.attr("src",$Classificacao)
+											
 								)
 							)
 							
@@ -107,7 +131,7 @@
 </head>
 <body>
 	<div class="logo">
-	<h1>Cefetflix</h1>
+	<h1>CEFETFLIX</h1>
 	</div>
 	<div class="filmes">
 		

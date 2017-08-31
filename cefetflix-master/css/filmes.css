@@ -1,46 +1,51 @@
 img{
-	width: 50%;
+	width: 70%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	clear: both;
+	transition: 0.5s;
+	border-radius: 5px;
 }
 .filme h1{
 	color: red;
 	font-family: 'Oswald', sans-serif;
+	text-shadow: 0 0 1px #000;
+	font-size: 3em;
+	margin-top: 0;
 }
 .filme{
-	border-radius: 10px;
+	border-radius: 5px;
 	padding: 20px;
 	background-color: transparent;
-	margin: 5% 3%;
-	border: 3px solid #FFF;
-	transition: 0.5s;
-	width: 40%;
-	float: left;
+	border: 3px groove red;
+	width: 50%;
+	margin: 5% auto;
 }
 .filme:hover {
-	border: 3px solid red;
-	background-color: rgba(54,54,54,0.5);
-	box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 0, 0, 0.19);
+	border: 3px groove #FFF;
+	background-color: rgba(0,0,0,0.7);
+	box-shadow: 0 0px 20px 10px rgba(0, 0, 0, 0.2), 0 0px 20px 10px rgba(0, 0, 0, 0.19);
 }
 body{
 	width: 100%;
 	margin: 0 auto;
 	text-align: center;
 	color: #FFF;
-	background: url(https://cdn.pixabay.com/photo/2017/08/05/15/00/auditorium-2584269_960_720.jpg) no-repeat fixed;
+	background: url(https://static1.squarespace.com/static/54400c3de4b06a018e97259e/t/593ffc351e5b6cb30770fafc/1497365559646/b9d8119675e3c58db3c266a75ee46e69.jpg?format=1500w) no-repeat fixed;
 	font-family: sans-serif;
 	background-size: 100%;
 
 }
 h2{
-	clear: both;
 	color: red;
 	font-family: 'Oswald', sans-serif;
+	text-shadow: 0 0 1px #000;
+	font-size: 2em;
 }
 
 ul{
 	list-style: none;
 	padding: 0;
+	font-size:1.2em;
 }
 
 .rating {
@@ -63,12 +68,14 @@ ul{
 	font-size: 7em;
 	padding: 20px;
 	font-family: 'Oswald', sans-serif;
-	transition: 1s;
+	transition: 0.5s;
+	text-shadow: 2px 2px 5px #000;
+	padding: 0;
 }
 .logo h1:hover{
 	font-size: 9em;
-	text-shadow: 0 6px 10px 0 rgba(255, 0, 0, 0.2), 0 6px 10px 0 rgba(255, 0, 0, 0.19);
-	font-family: 'Oswald', sans-serif;
+	color: #FFF;
+	text-shadow: 4px 4px 10px #000;
 }
 .av h2, .ts h2{
 	color: red;
@@ -76,25 +83,23 @@ ul{
 }
 
 .classifi{
-	width: 50%;
 	margin: 0 auto;
-	transition: 0.5s;
 }
-.classifi:hover{
-	width: 60%;
+.classi:hover{
+	width: 20%; 
 	padding: 5px;
-	box-shadow: 0 4px 10px 0 rgba(255, 0, 0, 0.2), 0 6px 10px 0 rgba(255, 0, 0, 0.19);
-	background-color: rgba(32,0,0,0.19);
 }
-.descricao{
-	display: none;
-}
-
-.filme:hover .descricao{
-	display: block;
-	transition: 0.5s;
-}
-.filme:hover img{
+.filme:hover .foto{
  	width: 100%;
+ 	border-radius: px;
+ }
+
+ .classi{
+ 	border-radius: 100px;
+ 	width: 100px;
  	transition: 0.5s;
  }
+
+p{
+	font-size:1.2em;
+}
