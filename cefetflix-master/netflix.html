@@ -6,8 +6,8 @@
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<script type="text/javascript" src="./js/filmes.js"></script>
 	<script type="text/javascript" src="./js/jquery.min.js"></script>
-	<link rel="stylesheet" type="text/css" href="./css/filmes.css">
 	<link rel="stylesheet" type="text/css" href="./css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/filmes.css">
 	<script type="text/javascript">
 		$(function(){
 			console.log(filmes);
@@ -46,58 +46,60 @@
 						.append($("<img />")
 								.attr("src", programa.figura)
 						)
-						.append($("<h1 />")
-								.text(programa.titulo)
-						)
-						
-						.append($("<p />")
-								.text(programa.resumo)
-						)
 						.append($("<div />")
-							.addClass("genero")
-							.append($("<h4 />")
-								.text(programa.generos))	
+							.addClass("descricao")
+							.append($("<h1 />")
+									.text(programa.titulo)
 							)
-						.append($("<div />").addClass("elenco")
 							
-							.append($("<h2 />")
-								.text("Elenco")
+							.append($("<p />")
+									.text(programa.resumo)
 							)
-								.append($("<p />")
-									.text(programa.elenco)
-							)
-						)
-						
-						.append($("<div />").addClass("classifi")
-							
-							.append($("<h2 />")
-								.text("Classificação indicativa")
-							)
-								.append($("<p />")
-									.text(programa.classificacao)
-							)
-						)
-						
-
-						.append($("<div />")
-							.addClass("av")
-							.append($("<h2 />")
-								.text("Avaliações")	
+							.append($("<div />")
+								.addClass("genero")
+								.append($("<h4 />")
+									.text(programa.generos))	
 								)
-							.append($ul)
+							.append($("<div />").addClass("elenco")
 								
-						
-						)
-							
-						.append($("<div />")
-							.addClass("ts")
 								.append($("<h2 />")
-								.text("Títulos semelhantes")
-								
+									.text("Elenco")
+								)
+									.append($("<p />")
+										.text(programa.elenco)
+								)
 							)
-						.append($seme)
-						)
 							
+							.append($("<div />").addClass("classifi")
+								
+								.append($("<h2 />")
+									.text("Classificação indicativa")
+								)
+									.append($("<p />")
+										.text(programa.classificacao)
+								)
+							)
+							
+
+							.append($("<div />")
+								.addClass("av")
+								.append($("<h2 />")
+									.text("Avaliações")	
+									)
+								.append($ul)
+									
+							
+							)
+								
+							.append($("<div />")
+								.addClass("ts")
+									.append($("<h2 />")
+									.text("Títulos semelhantes")
+									
+								)
+							.append($seme)
+							)
+						)
 					)
 			});
 		})

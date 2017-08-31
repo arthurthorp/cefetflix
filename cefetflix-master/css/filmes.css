@@ -1,5 +1,5 @@
 img{
-	width: 400px;
+	width: 50%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	clear: both;
 }
@@ -9,17 +9,18 @@ img{
 }
 .filme{
 	border-radius: 10px;
-	padding: 50px;
+	padding: 20px;
 	background-color: transparent;
-	margin: 50px;
+	margin: 5% 3%;
 	border: 3px solid #FFF;
 	transition: 0.5s;
+	width: 40%;
+	float: left;
 }
 .filme:hover {
 	border: 3px solid red;
 	background-color: rgba(54,54,54,0.5);
 	box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 0, 0, 0.19);
-
 }
 body{
 	width: 100%;
@@ -56,14 +57,17 @@ ul{
 .fa{
  	color: yellow;
 }
-.logo{
+.logo h1{
 	color: red;
 	margin: 0;
-	font-size: 3em;
-	padding: 50px;
+	font-size: 7em;
+	padding: 20px;
+	font-family: 'Oswald', sans-serif;
+	transition: 1s;
 }
 .logo h1:hover{
-	text-shadow: 
+	font-size: 9em;
+	text-shadow: 0 6px 10px 0 rgba(255, 0, 0, 0.2), 0 6px 10px 0 rgba(255, 0, 0, 0.19);
 	font-family: 'Oswald', sans-serif;
 }
 .av h2, .ts h2{
@@ -72,8 +76,25 @@ ul{
 }
 
 .classifi{
-	width: 400px;
+	width: 50%;
 	margin: 0 auto;
-	box-shadow: 0 4px 8px 0 rgba(255, 0, 0, 0.2), 0 6px 20px 0 rgba(255, 0, 0, 0.19);
+	transition: 0.5s;
+}
+.classifi:hover{
+	width: 60%;
+	padding: 5px;
+	box-shadow: 0 4px 10px 0 rgba(255, 0, 0, 0.2), 0 6px 10px 0 rgba(255, 0, 0, 0.19);
 	background-color: rgba(32,0,0,0.19);
 }
+.descricao{
+	display: none;
+}
+
+.filme:hover .descricao{
+	display: block;
+	transition: 0.5s;
+}
+.filme:hover img{
+ 	width: 100%;
+ 	transition: 0.5s;
+ }
